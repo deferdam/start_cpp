@@ -1,0 +1,16 @@
+{
+    "configurations": [
+      {
+        "name": "MinGW",
+        "includePath": [
+          "${workspaceFolder}/**",
+          "C:/MinGW/include" // Change this path to point to your MinGW include folder
+        ],
+        "compilerPath": "C:/MinGW/bin/gcc.exe", // Change this path to point to your gcc executable
+        "cStandard": "c11",
+        "cppStandard": "c++17"
+      }
+    ],
+    "version": 4
+  }
+  

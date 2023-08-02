@@ -1,0 +1,6 @@
+Bonjour, je suis une phrase écrite dans un fichier.
+42.1337
+J'ai 36 ans.
+Bonjour, je suis une phrase écrite dans un fichier.
+42.1337
+J'ai 36 ans.
