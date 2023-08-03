@@ -2,48 +2,9 @@
 
 using namespace std;
 
-class Personnage
-{
-    // Tout ce qui suit est public (accessible depuis l'extérieur)
-    public:
-    
-    void recevoirDegats(int nbDegats)
-    {
- 
-    }
- 
-    void attaquer(Personnage &cible)
-    {
- 
-    }
- 
-    void boirePotionDeVie(int quantitePotion)
-    {
- 
-    }
- 
-    void changerArme(string nomNouvelleArme, int degatsNouvelleArme)
-    {
- 
-    }
- 
-    bool estVivant()
-    {
- 
-    }
- 
-    // Tout ce qui suit est prive (inaccessible depuis l'extérieur)
-    private:
-    
-    int m_vie;
-    int m_mana;
-    string m_nomArme;
-    int m_degatsArme;
-};
- 
 int main()
 {
-    Personnage david, goliath;
+    Personnage david, goliath("Epee aiguisee", 20);
     //Création de 2 objets de type Personnage : david et goliath
  
     goliath.attaquer(david);    //goliath attaque david
