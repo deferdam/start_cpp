@@ -1,8 +1,9 @@
 #include "../include/Personnage.hpp"
+#include "../include/Arme.hpp"
 
 using namespace std;
 
-int main()
+int main(int ac, char * av[])
 {
     Personnage david, goliath("Epee aiguisee", 20);
     //Création de 2 objets de type Personnage : david et goliath

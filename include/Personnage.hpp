@@ -1,6 +1,7 @@
 #ifndef DEF_PERSONNAGE
 #define DEF_PERSONNAGE
 
+#include "Arme.hpp"
 #include <string>
 #include <iostream>
 #include <vector>
@@ -14,6 +15,7 @@ class Personnage
     Personnage(Personnage const& autre);
     Personnage(std::string nomArme, int degatsArme);
     ~Personnage();
+    void afficherEtat();
     void recevoirDegats(int nbDegats);
     void attaquer(Personnage &cible);
     void boirePotionDeVie(int quantitePotion);
@@ -24,8 +26,7 @@ class Personnage
 
     int m_vie;
     int m_mana;
-    std::string m_nomArme; //Pas de using namespace std, il faut donc mettre std:: devant string
-    int m_degatsArme;
+    Arme m_arme;
 };
 
 #endif

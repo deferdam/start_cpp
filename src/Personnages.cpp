@@ -1,4 +1,5 @@
-#include "Personnage.hpp"
+#include "../include/Personnage.hpp"
+#include "../include/Arme.hpp"
 
 using namespace std;
 
@@ -15,7 +16,7 @@ void Personnage::recevoirDegats(int nbDegats)
 
 void Personnage::attaquer(Personnage &cible)
 {
-    cible.recevoirDegats(m_degatsArme);
+    cible.recevoirDegats(m_arme.m_degats);
     //On inflige à la cible les dégâts que cause notre arme
 }
 
@@ -40,17 +41,17 @@ bool Personnage::estVivant()
     return m_vie > 0;
 }
 
-Personnage::Personnage() : m_vie(100), m_mana(100), m_nomArme("Epee rouillee"), m_degatsArme(10)
+Personnage::Personnage() : m_vie(100), m_mana(100), m_arme("Epee rouillee", 10)
 {
  
 }
 
-Personnage::Personnage(string nomArme, int degatsArme) : m_vie(100), m_mana(100),m_nomArme(nomArme), m_degatsArme(degatsArme)
+Personnage::Personnage(string nomArme, int degatsArme) : m_vie(100), m_mana(100), m_arme(nomArme, degatsArme)
 {
  
 }
 
-Personnage::Personnage(Personnage const& autre): m_vie(autre.m_vie), m_mana(autre.m_mana), m_nomArme(autre.m_nomArme), m_degatsArme(autre.m_degatsArme)
+Personnage::Personnage(Personnage const& autre): m_vie(autre.m_vie), m_mana(autre.m_mana), m_arme(autre.nomArme, degatsArme)
 {
 
 }
@@ -62,4 +63,11 @@ Personnage::~Personnage()
     je le mets pour montrer à quoi cela ressemble.
     En temps normal, un destructeur fait souvent des delete et quelques
     autres vérifications si nécessaire avant la destruction de l'objet. */
+}
+
+void Personnage::afficherEtat()
+{
+    cout << "vie : " << m_vie << endl;
+    cout << "mana : " << m_mana << endl;
+    m_arme.afficher();
 }
