@@ -2,13 +2,13 @@
 #define DEF_ARME
 
 #include "Personnage.hpp"
+#include <string>
  
 class Arme
 {
     public:
  
     Arme();
-    Arme(int degats);
     Arme(std::string nom, int degats);
     void changer(std::string nom, int degats);
     void afficher() const;
@@ -17,6 +17,8 @@ class Arme
  
     std::string m_nom;
     int m_degats;
+
+    friend class Personnage;
 };
  
 #endif

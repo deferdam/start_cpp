@@ -1,4 +1,6 @@
-SRC	=	src\main.cpp 
+SRC = 	src/main.cpp \
+		src/Arme.cpp \
+		src/Personnages.cpp
 
 OBJ	=	$(SRC; .cpp = .o)
 
