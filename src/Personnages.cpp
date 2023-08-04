@@ -16,7 +16,7 @@ void Personnage::recevoirDegats(int nbDegats)
 
 void Personnage::attaquer(Personnage &cible)
 {
-    cible.recevoirDegats(m_arme.m_degats);
+    cible.recevoirDegats(m_arme.getDegats());
     //On inflige à la cible les dégâts que cause notre arme
 }
 
@@ -32,8 +32,8 @@ void Personnage::boirePotionDeVie(int quantitePotion)
 
 void Personnage::changerArme(string nomNouvelleArme, int degatsNouvelleArme)
 {
-    m_arme.m_nom = nomNouvelleArme;
-    m_arme.m_degats = degatsNouvelleArme;
+    m_arme.setNom(nomNouvelleArme);
+    m_arme.setDegats(degatsNouvelleArme);
 }
 
 bool Personnage::estVivant()
@@ -51,7 +51,7 @@ Personnage::Personnage(string nomArme, int degatsArme) : m_vie(100), m_mana(100)
  
 }
 
-Personnage::Personnage(Personnage const& autre): m_vie(autre.m_vie), m_mana(autre.m_mana), m_arme(autre.m_arme.m_nom, autre.m_arme.m_degats)
+Personnage::Personnage(Personnage const& autre): m_vie(autre.m_vie), m_mana(autre.m_mana), m_arme(autre.m_arme.getNom(), autre.m_arme.getDegats())
 {
 
 }
