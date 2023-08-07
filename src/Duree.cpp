@@ -1,6 +1,8 @@
 #include "../include/Duree.hpp"
 #include <iostream>
  
+using namespace std;
+
 Duree::Duree(int heures, int minutes, int secondes) : m_heures(heures), m_minutes(minutes), m_secondes(secondes)
 {
 }
@@ -38,6 +40,11 @@ bool operator<(Duree const&a, Duree const& b)
     return a.estPlusPetitQue(b);
 }
 
+ostream &operator<<(ostream &flux, Duree const& duree)
+{
+    duree.afficher(flux) ;
+    return flux;
+}
 
 void Duree::afficher(ostream &flux) const
 {

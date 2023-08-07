@@ -25,10 +25,6 @@ class Duree
 bool operator==(Duree const&a, Duree const& b);
 bool operator!=(Duree const&a, Duree const& b);
 bool operator<(Duree const&a, Duree const& b);
-ostream &operator<<(ostream &flux, Duree const& duree)
-{
-    duree.afficher(flux) ;
-    return flux;
-}
+
 
 #endif
