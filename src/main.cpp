@@ -1,9 +1,10 @@
 #include "../include/Personnage.hpp"
 #include "../include/Arme.hpp"
+#include "../include/Duree.hpp"
 
 using namespace std;
 
-int main()
+int main(int ac, const char *av[])
 {
     //Création des personnages
     Personnage david, goliath("Epee aiguisee", 20);
@@ -21,6 +22,12 @@ int main()
     david.afficherEtat();
     cout << endl << "Goliath" << endl;
     goliath.afficherEtat();
+    Duree duree1(0, 10, 28), duree2(0, 10, 29);
+
+    if (duree1 < duree2)
+        cout << "le 1 plus petit que le 2";
+    else
+        cout << "le 2 plus petit que le 1";
  
     return 0;
 }
