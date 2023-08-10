@@ -8,6 +8,8 @@ int main(int ac, const char *av[])
 {
     //Création des personnages
     Personnage david, goliath("Epee aiguisee", 20);
+    
+    david.sePresenter();
  
     //Au combat !
     goliath.attaquer(david);

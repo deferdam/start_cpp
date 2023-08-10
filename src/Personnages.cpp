@@ -14,6 +14,11 @@ void Personnage::recevoirDegats(int nbDegats)
     }
 }
 
+void Personnage::coupDePoing(Personnage &cible) const
+{
+    cible.recevoirDegats(10);
+}
+
 void Personnage::attaquer(Personnage &cible)
 {
     cible.recevoirDegats(m_arme.getDegats());
@@ -70,4 +75,10 @@ void Personnage::afficherEtat()
     cout << "vie : " << m_vie << endl;
     cout << "mana : " << m_mana << endl;
     m_arme.afficher();
+}
+
+void Personnage::sePresenter() const
+{
+    cout << "Bonjour, je m'appelle " << m_nom << "." << endl;
+    cout << "J'ai encore " << m_vie << " points de vie." << endl;
 }
