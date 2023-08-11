@@ -12,7 +12,7 @@ class Personnage
     public:
 
     Personnage();
-    Guerrier lancelot("Laucelot du lac");
+    Guerrier lancelot(std::string nomArme);
     Personnage(Personnage const& autre);
     Personnage(std::string nomArme, int degatsArme);
     ~Personnage();
