@@ -9,20 +9,21 @@
 class Vehicule
 {
     public:
-    Vehicule(int prix);           //Construit un véhicule d'un certain prix
+    Vehicule(int prix);           
     virtual void affiche() const;
-    virtual ~Vehicule();          //Remarquez le 'virtual' ici
+    virtual int nbrRoues() const = 0;  //Affiche le nombre de roues du véhicule
+    virtual ~Vehicule();         
 
     protected:
     int m_prix;
 };
 
-class Voiture: public Vehicule
+class Voiture : public Vehicule
 {
     public:
     Voiture(int prix, int portes);
-    //Construit une voiture dont on fournit le prix et le nombre de portes
     virtual void affiche() const;
+    virtual int nbrRoues() const;  //Affiche le nombre de roues de la voiture
     virtual ~Voiture();
 
     private:

@@ -17,9 +17,13 @@ class Duree
  
     private:
  
+    void affiche(ostream& out) const;  //Permet d'écrire la durée dans un flux
+ 
     int m_heures;
     int m_minutes;
     int m_secondes;
+
+    friend std::ostream& operator<< (std::ostream& flux, Duree const& duree);
 };
 
 bool operator==(Duree const&a, Duree const& b);

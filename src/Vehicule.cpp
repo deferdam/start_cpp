@@ -38,3 +38,13 @@ void Moto::affiche() const
 
 Moto::~Moto()
 {}
+
+int Vehicule::nbrRoues() const
+{  
+  //Que mettre ici ????
+}
+
+int Voiture::nbrRoues() const
+{
+    return 4;
+}
